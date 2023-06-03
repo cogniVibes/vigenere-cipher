@@ -13,9 +13,7 @@ To encrypt the message, we repeat the keyword until it matches the length of the
 To encrypt each letter $p_i$​ in the plaintext, we find the corresponding letter $k_j$​ in the keyword $K'$ where $j$ is the index of $p_i$​ modulo $m$. Then, we shift the letter $p_i$​ by the index of $k_j$​ in the alphabet. Let $E$ represent the encrypted message.
 
 The mathematical representation of the encryption process is given by:
-$$
-E_i = (p_i + k_j) \mod 26
-$$
+$$E_i = (p_i + k_j) \mod 26$$
 where $E_i$​ is the $i$-th letter of the encrypted message and $j = (i−1) \mod m$.
 
 To decrypt the message, we use a similar process. We repeat the keyword until it matches the length of the ciphertext. Let $K'' = k_1, k_2, \ldots, k_m, k_1, k_2, \ldots, k_m, \ldots\$ (repeated until it matches the length of $E$).
@@ -23,9 +21,7 @@ To decrypt the message, we use a similar process. We repeat the keyword until it
 To decrypt each letter $E_i$​ in the ciphertext, we find the corresponding letter $k_j$​ in the keyword $K'$ (where $j$ is the index of $E_i$​ modulo $m$). Then, we shift the letter $E_i​$ back by the index of $k_j$​ in the alphabet. Let $D$ represent the decrypted message.
 
 The mathematical representation of the decryption process is given by:
-$$
-D_i = (Ei−kj) \mod 26
-$$
+$$D_i = (Ei−kj) \mod 26$$
 where $D_i$​ is the $i$-th letter of the decrypted message and $j = (i−1) \mod m$.
 
 Note that in these equations, we use modular arithmetic with $26$ since there are $26$ letters in the English alphabet. Additionally, we assume a simple mapping where $A$ is represented by $0$, $B$ by $1$, and so on.
